@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewData["Title"] = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Checkout</h1>
+
+<form asp-action="CreateCheckoutSession" method="post">
+    <button type="submit" class="btn btn-primary">Pay with Stripe</button>
+</form>

@@ -1,3 +1,5 @@
+using Stripe;
+
 namespace StripePaymentDemoApp
 {
     public class Program
@@ -8,6 +10,8 @@ namespace StripePaymentDemoApp
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
 
             var app = builder.Build();
 
